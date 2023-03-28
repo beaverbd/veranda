@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+option csharp_namespace = "GrpcUsersService";
+
+service Users {
+	rpc GetUsers (GetUsersRequest) returns (GetUsersResponse);
+}
+
+message GetUsersRequest {
+	int32 skip = 1;
+	int32 take = 2;
+}
+
+message	GetUsersResponse {
+	repeated UserResponse users = 1;
+}
+
+message UserResponse {
+	string firstName = 1;
+	string lastName = 2;
+	string publicId = 3;
+}
