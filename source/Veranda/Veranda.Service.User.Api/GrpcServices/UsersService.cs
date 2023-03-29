@@ -6,7 +6,7 @@ using Veranda.Service.User.Api.Mapper;
 
 namespace Veranda.Service.User.Api.GrpcServices;
 
-public class UsersService : Common.Connectors.UsersService.Services.GrpcUsersService
+public class UsersService : Users.UsersBase
 {
     private readonly UsersDbContext _dbContext;
     private readonly IMapper _mapper;
